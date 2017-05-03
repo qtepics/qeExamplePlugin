@@ -1,6 +1,6 @@
 # $File: //ASP/tec/gui/qeExamplePlugin/trunk/qeExamplePluginSup/Makefile $
-# $Revision: #2 $
-# $DateTime: 2016/11/08 17:29:39 $
+# $Revision: #4 $
+# $DateTime: 2017/05/03 18:48:46 $
 # Last checked in by: $Author: starritt $
 #
 # This make file is the bridge beween the EPICS build system and the Qt project qmake/make paradigm.
@@ -32,6 +32,11 @@ ifeq ($(OS),Windows_NT)
     define LINKFILE
         MKLINK /H  $(LIBFILE) ..\$(LIBFILE)
     endef
+
+    define NOOP
+       echo ""
+    endef
+
 else
     # Linux and the like.
     # We can use symbolic links on Linux
@@ -39,9 +44,12 @@ else
     define LINKFILE
        rm -f $(1) && ln -s ../$(LIBFILE)  $(LIBFILE)
     endef
-endif
 
-NOOP = :
+    define NOOP
+       :
+    endef
+
+endif
 
 # Directories of interest.
 #
@@ -88,12 +96,12 @@ install: $(TARGET)
 $(TARGET) : $(SOURCE_DIR)/$(MAKEFILE)  always
 	@echo "=== Building $(LIBFILE) plugin"                      && \
 	cd  $(SOURCE_DIR)                                           && \
-	make -f $(MAKEFILE) -j3 -w                                  && \
+	$(MAKE) -f $(MAKEFILE) -j 3 -w                              && \
 	echo "=== Installing plugin headers"                        && \
-	make -f $(MAKEFILE) install                                 && \
+	$(MAKE) -f $(MAKEFILE) install                              && \
 	echo "=== Setting up designer directory/folder"             && \
 	cd .. && cd $(TARGET_DIR)                                   && \
-	$(MKDIR) -p designer  &&  cd designer                       && \
+	$(MKDIR) designer  &&  cd designer                          && \
 	$(RM) $(LIBFILE) && $(call LINKFILE)                        && \
 	echo "=== Complete"
 
@@ -105,10 +113,10 @@ $(SOURCE_DIR)/$(MAKEFILE) : $(SOURCE_DIR)/$(PROJECT)
 
 
 # Do a qt clean, then delete all qmake generated Makefiles.
-# Note the : "command" is a null command in bash.
 #
 clean:
-	cd $(SOURCE_DIR) && test -f $(MAKEFILE) && make -f $(MAKEFILE) clean && $(RM) $(MAKEFILE) || $(NOOP)
+	cd $(SOURCE_DIR) && $(MAKE) -f $(MAKEFILE) clean || $(NOOP)
+	cd $(SOURCE_DIR) && $(RM) $(MAKEFILE)
 
 
 uninstall:
