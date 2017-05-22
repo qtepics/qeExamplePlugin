@@ -14,3 +14,5 @@ SOURCES += \
 
 OTHER_FILES += \
     plugin/exampleplugin.json
+
+# end
