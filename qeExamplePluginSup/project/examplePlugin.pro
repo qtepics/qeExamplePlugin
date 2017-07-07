@@ -1,6 +1,6 @@
 # $File: //ASP/tec/gui/qeExamplePlugin/trunk/qeExamplePluginSup/project/examplePlugin.pro $
-# $Revision: #2 $
-# $DateTime: 2016/11/06 13:05:22 $
+# $Revision: #3 $
+# $DateTime: 2017/07/07 12:01:14 $
 # Last checked in by: $Author: starritt $
 #
 #===========================================================
@@ -118,7 +118,7 @@ message( "....: to add an install build step which is required to install header
 #
 INCLUDEPATH += $$(QE_FRAMEWORK)/include
 
-LIBS += -L$$(QE_FRAMEWORK)/lib/$$(EPICS_HOST_ARCH) -lQEPlugin
+LIBS += -L$$(QE_FRAMEWORK)/lib/$$(EPICS_HOST_ARCH) -lQEFramework
 LIBS += -L$$(EPICS_BASE)/lib/$$(EPICS_HOST_ARCH) -lca -lCom
 
 # Set run time path for shared libraries
