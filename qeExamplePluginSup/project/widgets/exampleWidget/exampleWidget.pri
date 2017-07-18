@@ -22,6 +22,4 @@ INCLUDEPATH += \
     widgets/exampleWidget \
     plugin
 
-LIBS += -L$$_QE_FRAMEWORK/designer -lQEPlugin
-
 # end
