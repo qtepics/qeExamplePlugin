@@ -24,27 +24,27 @@
  *    andrew.rhyder@synchrotron.org.au
  */
 
-#ifndef EXAMPLE_WIDGET_H
-#define EXAMPLE_WIDGET_H
+#ifndef QE_EXAMPLE_WIDGET_H
+#define QE_EXAMPLE_WIDGET_H
 
 #include <QLabel>
 #include <QEWidget.h>
 #include <QEFloating.h>
-#include <examplePluginLibrary_global.h>
 #include <QCaVariableNamePropertyManager.h>
+#include <examplePluginLibrary_global.h>
 
 // Maximum number of variables.
 #define EXAMPLEWIDGET_NUM_VARIABLES 2
 
-class EXAMPLE_PLUGIN_LIBRARY_SHARED exampleWidget :
+class EXAMPLEPLUGINLIBRARYSHARED_EXPORT exampleWidget :
       public QLabel,
       public QEWidget
 {
    Q_OBJECT
 
 public:
-   exampleWidget( QWidget *parent = 0 );
-   exampleWidget( const QString &variableName, QWidget *parent = 0 );
+   explicit exampleWidget( QWidget *parent = 0 );
+   explicit exampleWidget( const QString &variableName, QWidget *parent = 0 );
 
 private:
    void establishConnection( unsigned int variableIndex );
@@ -222,4 +222,4 @@ public:
 
 };
 
-#endif // EXAMPLE_WIDGET_H
+#endif // QE_EXAMPLE_WIDGET_H
