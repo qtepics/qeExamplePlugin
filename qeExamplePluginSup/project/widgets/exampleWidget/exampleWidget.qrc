@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/customPlugin/exampleWidget">
+    <qresource prefix="/qe/example">
         <file>exampleWidget.png</file>
     </qresource>
 </RCC>
