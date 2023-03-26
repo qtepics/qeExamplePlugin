@@ -1,6 +1,6 @@
-# $File: //ASP/tec/gui/qeExamplePlugin/trunk/configure/RELEASE $
+# $File: //ASP/tec/gui/qevcl/trunk/configure/RELEASE $
 # $Revision: #1 $
-# $DateTime: 2016/11/06 13:05:22 $
+# $DateTime: 2020/06/08 15:51:50 $
 # Last checked in by: $Author: starritt $
 #
 # RELEASE - Location of external support modules
@@ -30,11 +30,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # Filled in at bundle build time
 BUNDLE=
 
+# Point to local copy of EPICS Qt framework 
 #
 QE_FRAMEWORK=$(BUNDLE)/gui/qeframework
 
 # EPICS_BASE usually appears last so other apps can override stuff:
+#
 EPICS_BASE=$(BUNDLE)/epics/base
-
 
 # end

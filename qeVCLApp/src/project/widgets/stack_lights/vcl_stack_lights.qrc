@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/vcl/stack_lights">
+        <file>vcl_stack_lights.png</file>
+    </qresource>
+</RCC>
+

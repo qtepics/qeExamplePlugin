@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/qe/example">
-        <file>exampleWidget.png</file>
-    </qresource>
-</RCC>

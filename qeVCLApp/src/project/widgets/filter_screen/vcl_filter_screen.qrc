@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/vcl/filter_screen">
+        <file>vcl_filter_screen_r00_disconnected.png</file>
+        <file>vcl_filter_screen_r00_inserted.png</file>
+        <file>vcl_filter_screen_r00_invalid.png</file>
+        <file>vcl_filter_screen_r00_moving.png</file>
+        <file>vcl_filter_screen_r00_unknown.png</file>
+        <file>vcl_filter_screen_r00_withdrawn.png</file>
+        <file>vcl_filter_screen_r90_disconnected.png</file>
+        <file>vcl_filter_screen_r90_inserted.png</file>
+        <file>vcl_filter_screen_r90_invalid.png</file>
+        <file>vcl_filter_screen_r90_moving.png</file>
+        <file>vcl_filter_screen_r90_unknown.png</file>
+        <file>vcl_filter_screen_r90_withdrawn.png</file>
+    </qresource>
+</RCC>

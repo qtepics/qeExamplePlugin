@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/vcl/horizslits">
+        <file>vcl_horizslits.png</file>
+    </qresource>
+</RCC>

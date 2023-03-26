@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/vcl/dblslits">
+        <file>vcl_dblslits.png</file>
+        <file>vcl_ds_down.png</file>
+        <file>vcl_ds_left.png</file>
+        <file>vcl_ds_neg.png</file>
+        <file>vcl_ds_pos.png</file>
+        <file>vcl_ds_right.png</file>
+        <file>vcl_ds_up.png</file>
+    </qresource>
+</RCC>

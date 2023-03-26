@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/vcl/shutter">
+        <file>vcl_shutter_closed.png</file>
+        <file>vcl_shutter_invalid.png</file>
+        <file>vcl_shutter_moving.png</file>
+        <file>vcl_shutter_open.png</file>
+        <file>vcl_shutter_unknown.png</file>
+        <file>vcl_shutter_disconnected.png</file>
+    </qresource>
+</RCC>

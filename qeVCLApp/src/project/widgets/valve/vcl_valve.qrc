@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/vcl/valve">
+        <file>vcl_valve_closed.png</file>
+        <file>vcl_valve_invalid.png</file>
+        <file>vcl_valve_moving.png</file>
+        <file>vcl_valve_open.png</file>
+        <file>vcl_valve_unknown.png</file>
+        <file>vcl_valve_disconnected.png</file>
+    </qresource>
+</RCC>

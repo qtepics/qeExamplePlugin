@@ -1,6 +1,6 @@
-# $File: //ASP/tec/gui/qeExamplePlugin/trunk/Makefile $
+# $File: //ASP/tec/gui/qevcl/trunk/Makefile $
 # $Revision: #1 $
-# $DateTime: 2016/11/06 13:05:22 $
+# $DateTime: 2020/06/08 15:51:50 $
 # Last checked in by: $Author: starritt $
 #
 # Makefile at top of application tree

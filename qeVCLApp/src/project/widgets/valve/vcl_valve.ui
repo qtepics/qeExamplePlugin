@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VCLValve</class>
+ <widget class="QWidget" name="VCLValve">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>94</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="mainFrame">
+     <property name="minimumSize">
+      <size>
+       <width>48</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="QEPushButton" name="openButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="font">
+         <font/>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="variable" stdset="0">
+         <string>$(DEVICE):OPEN_CLOSE_CMD</string>
+        </property>
+        <property name="defaultStyle" stdset="0">
+         <string>QEPushButton{ background-color: #a0ffa0; color: #000000; }</string>
+        </property>
+        <property name="displayAlarmStateOption" stdset="0">
+         <enum>QEPushButton::Never</enum>
+        </property>
+        <property name="format" stdset="0">
+         <enum>QEPushButton::Integer</enum>
+        </property>
+        <property name="clickText">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QEPvFrame" name="statusImage">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="variableAsToolTip">
+         <bool>true</bool>
+        </property>
+        <property name="displayAlarmStateOption" stdset="0">
+         <enum>QEFrame::Never</enum>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="pixmap0" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_unknown.png</pixmap>
+        </property>
+        <property name="pixmap1" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_invalid.png</pixmap>
+        </property>
+        <property name="pixmap2" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_closed.png</pixmap>
+        </property>
+        <property name="pixmap3" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_open.png</pixmap>
+        </property>
+        <property name="pixmap4" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_moving.png</pixmap>
+        </property>
+        <property name="pixmap5" stdset="0">
+         <pixmap resource="vcl_valve.qrc">:/vcl/valve/vcl_valve_disconnected.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QEPushButton" name="closeButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="font">
+         <font/>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="variable" stdset="0">
+         <string>$(DEVICE):OPEN_CLOSE_CMD</string>
+        </property>
+        <property name="defaultStyle" stdset="0">
+         <string>QEPushButton{ background-color: #ffa0a0; color: #000000; }</string>
+        </property>
+        <property name="displayAlarmStateOption" stdset="0">
+         <enum>QEPushButton::Never</enum>
+        </property>
+        <property name="format" stdset="0">
+         <enum>QEPushButton::Integer</enum>
+        </property>
+        <property name="clickText">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QEPushButton</class>
+   <extends>QPushButton</extends>
+   <header>QEPushButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QEPvFrame</class>
+   <extends>QEFrame</extends>
+   <header>QEPvFrame.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QEFrame</class>
+   <extends>QFrame</extends>
+   <header>QEFrame.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="vcl_valve.qrc"/>
+ </resources>
+ <connections/>
+</ui>

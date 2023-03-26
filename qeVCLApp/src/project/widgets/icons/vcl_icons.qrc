@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/vcl/icons">
+        <file>vcl_camera_icon.png</file>
+        <file>vcl_ion_pump_icon.png</file>
+    </qresource>
+</RCC>

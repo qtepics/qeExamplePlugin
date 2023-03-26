@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/vcl/polyline">
+        <file>vcl_polyline.png</file>
+    </qresource>
+</RCC>
+

@@ -1,0 +1,51 @@
+# $File: //ASP/tec/gui/qevcl/trunk/qeVCLTestApp/Db/filter_screen.db $
+# $Revision: #1 $
+# $DateTime: 2021/03/23 17:16:58 $
+# Last checked in by: $Author: starritt $
+#
+# Description
+#
+# Formal template parameters.
+#
+# DEVICE - aperture device name, e.g. LTB01SLH01
+# NAME   - descriptive name
+#
+
+record (stringin, "$(DEVICE):NAME") {
+    field (DESC, "name")
+    field (SCAN, "Passive")
+    field (PINI, "YES")
+    field (VAL,  "$(NAME)")
+}
+
+record (ao, "$(DEVICE):INSERT_CMD") {
+    field (DESC, "Axis Set-Point")
+    field (SCAN, "Passive")
+    field (OMSL, "Closed Loop")
+    field (DOL,  "20.0")
+    field (EGU,  "mm")
+    field (PREC, "2")
+}
+
+record (ao, "$(DEVICE):WITHDRAW_CMD") {
+    field (DESC, "Axis Set-Point")
+    field (SCAN, "Passive")
+    field (OMSL, "Closed Loop")
+    field (DOL,  "5.0")
+    field (EGU,  "mm")
+    field (PREC, "2")
+}
+
+# Convert to GUI friendly enum strings.
+#
+record (mbbi, "$(DEVICE):STATUS") {
+    field (DESC, "$(NAME) status")
+    field (SCAN, "Passive")
+    field (UNSV, "INVALID")
+    field (ZRST, "Unknown")
+    field (ZRSV, "MINOR")
+    field (ONST, "Inserted")
+    field (TWST, "Withdrawn")
+}
+
+# end

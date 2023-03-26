@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/vcl/vertslits">
+        <file>vcl_vertslits.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,89 @@
+# $File: //ASP/tec/gui/qevcl/trunk/qeVCLTestApp/Db/dbl_slit_test.template $
+# $Revision: #1 $
+# $DateTime: 2020/09/19 17:47:06 $
+# Last checked in by: $Author: starritt $
+#
+
+# Formal Macro name
+# DEVICE
+#
+
+record (ao, "$(DEVICE)_SP") {
+    field (DESC, "Postion set point")
+    field (SCAN, "Passive")
+    field (PINI, "YES")
+    field (VAL,  "0.0")
+    field (EGU,  "mm")
+    field (PREC, "3")
+    field (LOPR, "-50.0")
+    field (HOPR, "-50.0")
+    field (DRVL, "-50.0")
+    field (DRVH, "-50.0")
+}
+
+record (ai, "$(DEVICE)_MON") {
+    field (DESC, "Postion read back")
+    field (SCAN, ".1 second")
+    field (INP,  "$(DEVICE)_SP")
+    field (EGU,  "mm")
+    field (PREC, "3")
+    field (LOPR, "-50.0")
+    field (HOPR, "-50.0")
+}
+
+record (ao, "$(DEVICE)_TWV") {
+    field (DESC, "Postion tweak value")
+    field (SCAN, "Passive")
+    field (PINI, "YES")
+    field (VAL,  "0.1")
+    field (EGU,  "mm")
+    field (PREC, "3")
+    field (LOPR, "0.0")
+    field (HOPR, "2.0")
+    field (DRVL, "0.0")
+    field (DRVH, "2.0")
+}
+
+record (bo, "$(DEVICE)_TWF") {
+    field (DESC, "Postion tweak forward")
+    field (SCAN, "Passive")
+    field (ZNAM, "twk fwd")
+    field (ONAM, "twk fwd")
+    field (FLNK, "$(DEVICE)_TWF_CALC")
+}
+
+record (calcout, "$(DEVICE)_TWF_CALC") {
+    field (DESC, "Postion tweak fwd calcout")
+    field (SCAN, "Passive")
+    field (INPA, "$(DEVICE)_SP")
+    field (INPB, "$(DEVICE)_TWV")
+    field (CALC, "A+B")
+    field (EGU,  "mm")
+    field (PREC, "3")
+    field (DOPT, "Use CALC")
+    field (OOPT, "Every Time")
+    field (OUT,  "$(DEVICE)_SP PP")
+}
+
+record (bo, "$(DEVICE)_TWR") {
+    field (DESC, "Postion tweak reverse")
+    field (SCAN, "Passive")
+    field (ZNAM, "twk rev")
+    field (ONAM, "twk rev")
+    field (FLNK, "$(DEVICE)_TWR_CALC")
+}
+
+record (calcout, "$(DEVICE)_TWR_CALC") {
+    field (DESC, "Position tweak rev calcout")
+    field (SCAN, "Passive")
+    field (INPA, "$(DEVICE)_SP")
+    field (INPB, "$(DEVICE)_TWV")
+    field (CALC, "A-B")
+    field (EGU,  "mm")
+    field (PREC, "3")
+    field (DOPT, "Use CALC")
+    field (OOPT, "Every Time")
+    field (OUT,  "$(DEVICE)_SP PP")
+}
+
+# end

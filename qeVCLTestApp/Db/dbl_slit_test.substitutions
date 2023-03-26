@@ -1,0 +1,20 @@
+# $File: //ASP/tec/gui/qevcl/trunk/qeVCLTestApp/Db/dbl_slit_test.substitutions $
+# $Revision: #1 $
+# $DateTime: 2020/09/19 17:47:06 $
+# Last checked in by: $Author: starritt $
+#
+
+
+file db/dbl_slit_test.template {
+    pattern { DEVICE                      }
+            { "SR12ID01SLT21:HCENTRE_VRT" }
+            { "SR12ID01SLT21:HSIZE_VRT"   }
+            { "SR12ID01SLT21:VCENTRE_VRT" }
+            { "SR12ID01SLT21:VSIZE_VRT"   }
+            { "SR12ID01SLT21:XI_MTR"      }
+            { "SR12ID01SLT21:XO_MTR"      }
+            { "SR12ID01SLT21:YB_MTR"      }
+            { "SR12ID01SLT21:YT_MTR"      }
+}
+
+# end

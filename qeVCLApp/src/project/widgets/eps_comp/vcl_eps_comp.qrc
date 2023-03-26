@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/vcl/eps_comp">
+        <file>vcl_eps_comp.png</file>
+    </qresource>
+</RCC>
