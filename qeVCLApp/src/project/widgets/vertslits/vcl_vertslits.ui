@@ -141,9 +141,6 @@
               <height>13</height>
              </size>
             </property>
-            <property name="font">
-             <font/>
-            </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>
             </property>
@@ -234,7 +231,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../dblslits/vcl_dblslits.qrc">
                  <normaloff>:/vcl/dblslits/vcl_ds_neg.png</normaloff>:/vcl/dblslits/vcl_ds_neg.png</iconset>
                </property>
                <property name="iconSize">
@@ -280,7 +277,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../dblslits/vcl_dblslits.qrc">
                  <normaloff>:/vcl/dblslits/vcl_ds_pos.png</normaloff>:/vcl/dblslits/vcl_ds_pos.png</iconset>
                </property>
                <property name="iconSize">
@@ -356,9 +353,6 @@
               <width>16777215</width>
               <height>13</height>
              </size>
-            </property>
-            <property name="font">
-             <font/>
             </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>
@@ -453,7 +447,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../dblslits/vcl_dblslits.qrc">
                  <normaloff>:/vcl/dblslits/vcl_ds_down.png</normaloff>:/vcl/dblslits/vcl_ds_down.png</iconset>
                </property>
                <property name="iconSize">
@@ -499,7 +493,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../dblslits/vcl_dblslits.qrc">
                  <normaloff>:/vcl/dblslits/vcl_ds_up.png</normaloff>:/vcl/dblslits/vcl_ds_up.png</iconset>
                </property>
                <property name="iconSize">

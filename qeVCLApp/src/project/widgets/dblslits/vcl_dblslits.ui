@@ -141,9 +141,6 @@
               <height>13</height>
              </size>
             </property>
-            <property name="font">
-             <font/>
-            </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>
             </property>
@@ -336,9 +333,6 @@
               <width>16777215</width>
               <height>13</height>
              </size>
-            </property>
-            <property name="font">
-             <font/>
             </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>
@@ -611,9 +605,6 @@
               <height>13</height>
              </size>
             </property>
-            <property name="font">
-             <font/>
-            </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>
             </property>
@@ -858,9 +849,6 @@
               <width>16777215</width>
               <height>13</height>
              </size>
-            </property>
-            <property name="font">
-             <font/>
             </property>
             <property name="styleSheet">
              <string notr="true">QWidget { background-color: rgba(0, 0, 0, 0); color: rgb(130, 4, 0); }</string>

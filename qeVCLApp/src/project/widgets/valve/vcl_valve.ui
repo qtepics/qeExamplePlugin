@@ -70,9 +70,6 @@
           <height>22</height>
          </size>
         </property>
-        <property name="font">
-         <font/>
-        </property>
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
@@ -82,6 +79,9 @@
         <property name="variable" stdset="0">
          <string>$(DEVICE):OPEN_CLOSE_CMD</string>
         </property>
+        <property name="clickText">
+         <string>2</string>
+        </property>
         <property name="defaultStyle" stdset="0">
          <string>QEPushButton{ background-color: #a0ffa0; color: #000000; }</string>
         </property>
@@ -90,9 +90,6 @@
         </property>
         <property name="format" stdset="0">
          <enum>QEPushButton::Integer</enum>
-        </property>
-        <property name="clickText">
-         <string>2</string>
         </property>
        </widget>
       </item>
@@ -147,9 +144,6 @@
           <height>22</height>
          </size>
         </property>
-        <property name="font">
-         <font/>
-        </property>
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
@@ -159,6 +153,9 @@
         <property name="variable" stdset="0">
          <string>$(DEVICE):OPEN_CLOSE_CMD</string>
         </property>
+        <property name="clickText">
+         <string>1</string>
+        </property>
         <property name="defaultStyle" stdset="0">
          <string>QEPushButton{ background-color: #ffa0a0; color: #000000; }</string>
         </property>
@@ -167,9 +164,6 @@
         </property>
         <property name="format" stdset="0">
          <enum>QEPushButton::Integer</enum>
-        </property>
-        <property name="clickText">
-         <string>1</string>
         </property>
        </widget>
       </item>
