@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ui version="4.0">
  <class>VCLFilterScreen</class>
  <widget class="QWidget" name="VCLFilterScreen">
@@ -107,10 +107,10 @@
          <string>QEPushButton{ background-color: #a0ffa0; color: #000000; }</string>
         </property>
         <property name="displayAlarmStateOption" stdset="0">
-         <enum>QEPushButton::Never</enum>
+         <enum>QE::Never</enum>
         </property>
         <property name="format" stdset="0">
-         <enum>QEPushButton::Integer</enum>
+         <enum>QE::Integer</enum>
         </property>
        </widget>
       </item>
@@ -146,10 +146,10 @@
          <string>QEPushButton{ background-color: #ffa0a0; color: #000000; }</string>
         </property>
         <property name="displayAlarmStateOption" stdset="0">
-         <enum>QEPushButton::Never</enum>
+         <enum>QE::Never</enum>
         </property>
         <property name="format" stdset="0">
-         <enum>QEPushButton::Integer</enum>
+         <enum>QE::Integer</enum>
         </property>
        </widget>
       </item>
@@ -184,7 +184,7 @@
          <bool>true</bool>
         </property>
         <property name="displayAlarmStateOption" stdset="0">
-         <enum>QEFrame::Never</enum>
+         <enum>QE::Never</enum>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -226,7 +226,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="vcl_filter_screen.qrc"/>
+  <include location="vcl_filter_screen.qrc"></include>
  </resources>
- <connections/>
+ <connections></connections>
 </ui>

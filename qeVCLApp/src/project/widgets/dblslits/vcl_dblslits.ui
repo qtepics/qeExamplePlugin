@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ui version="4.0">
  <class>VCLDoubleSlits</class>
  <widget class="QWidget" name="VCLDoubleSlits">
@@ -226,7 +226,7 @@
                 </size>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -267,7 +267,7 @@
                 </size>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -421,7 +421,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -467,7 +467,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -541,7 +541,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
         <widget class="QWidget" name="widgetBottomLeft" native="true">
@@ -692,7 +692,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -738,7 +738,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -799,7 +799,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
         <widget class="QWidget" name="widgetTopRight" native="true">
@@ -940,7 +940,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -986,7 +986,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="vcl_dblslits.qrc">
@@ -1060,7 +1060,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
         <widget class="QESimpleShape" name="upperBlade">
@@ -1105,7 +1105,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
         <widget class="QLabel" name="outerLabel">
@@ -1236,7 +1236,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="vcl_dblslits.qrc"/>
+  <include location="vcl_dblslits.qrc"></include>
  </resources>
- <connections/>
+ <connections></connections>
 </ui>

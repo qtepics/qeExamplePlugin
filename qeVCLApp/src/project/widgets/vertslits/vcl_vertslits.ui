@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ui version="4.0">
  <class>VCLVerticalSlits</class>
  <widget class="QWidget" name="VCLVerticalSlits">
@@ -228,7 +228,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="../dblslits/vcl_dblslits.qrc">
@@ -274,7 +274,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="../dblslits/vcl_dblslits.qrc">
@@ -444,7 +444,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="../dblslits/vcl_dblslits.qrc">
@@ -490,7 +490,7 @@
                 </font>
                </property>
                <property name="text">
-                <string/>
+                <string></string>
                </property>
                <property name="icon">
                 <iconset resource="../dblslits/vcl_dblslits.qrc">
@@ -551,7 +551,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
         <widget class="QESimpleShape" name="upperBlade">
@@ -596,7 +596,7 @@
           </color>
          </property>
          <property name="displayAlarmStateOption" stdset="0">
-          <enum>QESimpleShape::Never</enum>
+          <enum>QE::Never</enum>
          </property>
         </widget>
        </widget>
@@ -639,7 +639,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../dblslits/vcl_dblslits.qrc"/>
+  <include location="../dblslits/vcl_dblslits.qrc"></include>
  </resources>
- <connections/>
+ <connections></connections>
 </ui>

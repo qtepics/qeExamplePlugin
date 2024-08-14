@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ui version="4.0">
  <class>VCLEpsComp</class>
  <widget class="QWidget" name="VCLEpsComp">
@@ -240,7 +240,7 @@
          </color>
         </property>
         <property name="displayAlarmStateOption" stdset="0">
-         <enum>QESimpleShape::WhenInvalid</enum>
+         <enum>QE::WhenInvalid</enum>
         </property>
        </widget>
       </item>
@@ -271,6 +271,6 @@
    <header>QSimpleShape.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
- <connections/>
+ <resources></resources>
+ <connections></connections>
 </ui>

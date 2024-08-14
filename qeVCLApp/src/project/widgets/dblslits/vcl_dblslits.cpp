@@ -1,12 +1,12 @@
 /* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/dblslits/vcl_dblslits.cpp $
- * $Revision: #7 $
- * $DateTime: 2022/12/29 14:27:39 $
+ * $Revision: #8 $
+ * $DateTime: 2024/02/02 17:10:15 $
  * Last checked in by: $Author: starritt $
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2020-2022 Australian Synchrotron
+ * Copyright (c) 2020-2024 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -29,6 +29,7 @@
 #include "vcl_dblslits.h"
 #include <ui_vcl_dblslits.h>
 #include <QDebug>
+#include <QEEnums.h>
 #include <QECommon.h>
 
 #define DEBUG qDebug () << "vcl_dblslits" << __LINE__ << __FUNCTION__ << "  "
@@ -128,7 +129,7 @@ VCLDoubleSlits::VCLDoubleSlits (QWidget* parent) :
 
    this->setVariableAsToolTip (false);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (standardProperties::DISPLAY_ALARM_STATE_NEVER);
+   this->setDisplayAlarmStateOption (QE::Never);
 }
 
 //------------------------------------------------------------------------------

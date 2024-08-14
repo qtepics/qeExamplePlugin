@@ -1,12 +1,12 @@
 /* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/shutter/vcl_shutter.cpp $
- * $Revision: #8 $
- * $DateTime: 2023/01/26 21:48:07 $
+ * $Revision: #9 $
+ * $DateTime: 2024/02/02 17:10:15 $
  * Last checked in by: $Author: starritt $
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2020-2023 Australian Synchrotron
+ * Copyright (c) 2020-2024 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -28,7 +28,7 @@
 
 #include "vcl_shutter.h"
 #include <ui_vcl_shutter.h>
-
+#include <QEEnums.h>
 #include <QDebug>
 
 #define DEBUG qDebug () << "vcl_shutter" << __LINE__ << __FUNCTION__ << "  "
@@ -54,7 +54,7 @@ VCLShutter::VCLShutter (QWidget* parent) :
 
    this->setVariableAsToolTip (false);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (standardProperties::DISPLAY_ALARM_STATE_NEVER);
+   this->setDisplayAlarmStateOption (QE::Never);
 
    this->mDeviceName = "";
    this->mDefaultSubstitutions = "";

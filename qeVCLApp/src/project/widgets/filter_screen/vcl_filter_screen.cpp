@@ -1,12 +1,12 @@
 /* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/filter_screen/vcl_filter_screen.cpp $
- * $Revision: #10 $
- * $DateTime: 2023/01/26 21:48:07 $
+ * $Revision: #11 $
+ * $DateTime: 2024/02/02 17:10:15 $
  * Last checked in by: $Author: starritt $
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2021-2023 Australian Synchrotron
+ * Copyright (c) 2021-2024 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -28,6 +28,7 @@
 
 #include "vcl_filter_screen.h"
 #include <ui_vcl_filter_screen.h>
+#include <QEEnums.h>
 #include <QDebug>
 
 #define DEBUG qDebug () << "vcl_filter_screen" << __LINE__ << __FUNCTION__ << "  "
@@ -50,7 +51,7 @@ VCLFilterScreen::VCLFilterScreen (QWidget* parent) :
 
    this->setVariableAsToolTip (false);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (standardProperties::DISPLAY_ALARM_STATE_NEVER);
+   this->setDisplayAlarmStateOption (QE::Never);
 
    // Set default property values.
    //

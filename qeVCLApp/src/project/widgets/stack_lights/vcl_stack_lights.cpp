@@ -1,12 +1,12 @@
 /* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights.cpp $
- * $Revision: #3 $
- * $DateTime: 2023/02/16 11:27:26 $
+ * $Revision: #4 $
+ * $DateTime: 2024/02/02 17:10:15 $
  * Last checked in by: $Author: starritt $
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2021-2023 Australian Synchrotron
+ * Copyright (c) 2021-2024 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -31,6 +31,7 @@
 #include <QDebug>
 #include <QPainter>
 #include <QPen>
+#include <QEEnums.h>
 #include <QECommon.h>
 #include <QEInteger.h>
 
@@ -62,7 +63,7 @@ VCLStackLights::VCLStackLights (QWidget* parent) :
    this->setNumVariables (1);
    this->setVariableAsToolTip (true);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (standardProperties::DISPLAY_ALARM_STATE_WHEN_INVALID);
+   this->setDisplayAlarmStateOption (QE::WhenInvalid);
 
    // Use default context menu.
    //

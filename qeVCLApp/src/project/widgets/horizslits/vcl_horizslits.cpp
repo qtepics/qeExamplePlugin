@@ -1,12 +1,12 @@
 /* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/horizslits/vcl_horizslits.cpp $
- * $Revision: #6 $
- * $DateTime: 2023/02/16 11:27:26 $
+ * $Revision: #7 $
+ * $DateTime: 2024/02/02 17:10:15 $
  * Last checked in by: $Author: starritt $
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2020-2023 Australian Synchrotron
+ * Copyright (c) 2020-2024 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -29,6 +29,7 @@
 #include "vcl_horizslits.h"
 #include <ui_vcl_horizslits.h>
 #include <QDebug>
+#include <QEEnums.h>
 #include <QECommon.h>
 #include <vcl_dblslits.h>
 
@@ -90,7 +91,7 @@ VCLHorizontalSlits::VCLHorizontalSlits (QWidget* parent) :
 
    this->setVariableAsToolTip (false);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (standardProperties::DISPLAY_ALARM_STATE_NEVER);
+   this->setDisplayAlarmStateOption (QE::Never);
 }
 
 //------------------------------------------------------------------------------
