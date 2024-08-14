@@ -30,8 +30,9 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # Filled in at bundle build time
 BUNDLE=
 
-# Point to local copy of EPICS Qt framework 
+# Point to local copy of ACAI and EPICS Qt framework 
 #
+ACAI=$(BUNDLE)/epics/acai
 QE_FRAMEWORK=$(BUNDLE)/gui/qeframework
 
 # EPICS_BASE usually appears last so other apps can override stuff:
