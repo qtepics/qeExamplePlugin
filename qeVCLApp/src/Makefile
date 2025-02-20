@@ -1,6 +1,6 @@
 # $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/Makefile $
-# $Revision: #2 $
-# $DateTime: 2020/06/09 17:12:29 $
+# $Revision: #3 $
+# $DateTime: 2025/01/20 14:28:28 $
 # Last checked in by: $Author: starritt $
 #
 # This make file is the bridge beween the EPICS build system and the Qt project qmake/make paradigm.
@@ -76,7 +76,7 @@ install: $(TARGET)
 $(TARGET) : $(SOURCE_DIR)/$(MAKEFILE)  $(SOURCE_DIR)/*/*
 	@echo "=== Building $(LIBFILE) plugin"                      && \
 	cd  $(SOURCE_DIR)                                           && \
-	make -f $(MAKEFILE) -j3 -w                                  && \
+	make -f $(MAKEFILE) -j 3 -w                                 && \
 	echo "=== $(LIBFILE) library build complete"
 
 
