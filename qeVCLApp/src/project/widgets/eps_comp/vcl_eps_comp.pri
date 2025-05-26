@@ -1,7 +1,6 @@
-# $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/eps_comp/vcl_eps_comp.pri $
-# $Revision: #1 $
-# $DateTime: 2023/03/10 12:25:22 $
-# Last checked in by: $Author: starritt $
+# File: qeVCLApp/src/project/widgets/eps_comp/vcl_eps_comp.pri
+# DateTime: Mon May 26 17:17:29 2025
+# Last checked in by: starritt
 #
 
 INCLUDEPATH += $$PWD

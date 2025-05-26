@@ -1,7 +1,6 @@
-# $File: //ASP/tec/gui/qevcl/trunk/qeVCLTestApp/src/Makefile $
-# $Revision: #1 $
-# $DateTime: 2020/09/19 17:47:06 $
-# Last checked in by: $Author: starritt $
+# File: qeVCLTestApp/src/Makefile
+# DateTime: Mon May 26 17:17:30 2025
+# Last checked in by: starritt
 #
 
 TOP=../..

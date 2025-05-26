@@ -1,7 +1,6 @@
-# $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/Makefile $
-# $Revision: #3 $
-# $DateTime: 2025/01/20 14:28:28 $
-# Last checked in by: $Author: starritt $
+# File: qeVCLApp/src/Makefile
+# DateTime: Mon May 26 17:17:29 2025
+# Last checked in by: starritt
 #
 # This make file is the bridge beween the EPICS build system and the Qt project qmake/make paradigm.
 #

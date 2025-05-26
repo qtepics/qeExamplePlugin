@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/shutter/vcl_shutter.h $
- * $Revision: #5 $
- * $DateTime: 2021/07/27 17:47:47 $
- * Last checked in by: $Author: starritt $
+/* File: qeVCLApp/src/project/widgets/shutter/vcl_shutter.h
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

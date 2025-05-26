@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/dblslits/vcl_dblslits_manager.h $
- * $Revision: #1 $
- * $DateTime: 2020/09/08 22:09:42 $
- * Last checked in by: $Author: starritt $
+/* File: qeVCLApp/src/project/widgets/dblslits/vcl_dblslits_manager.h
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

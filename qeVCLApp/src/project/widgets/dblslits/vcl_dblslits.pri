@@ -1,7 +1,6 @@
-# $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/dblslits/vcl_dblslits.pri $
-# $Revision: #2 $
-# $DateTime: 2020/09/14 20:04:51 $
-# Last checked in by: $Author: starritt $
+# File: qeVCLApp/src/project/widgets/dblslits/vcl_dblslits.pri
+# DateTime: Mon May 26 17:17:29 2025
+# Last checked in by: starritt
 #
 
 INCLUDEPATH += $$PWD

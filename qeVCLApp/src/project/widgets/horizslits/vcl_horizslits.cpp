@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/horizslits/vcl_horizslits.cpp $
- * $Revision: #7 $
- * $DateTime: 2024/02/02 17:10:15 $
- * Last checked in by: $Author: starritt $
+/* File: qeVCLApp/src/project/widgets/horizslits/vcl_horizslits.cpp
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

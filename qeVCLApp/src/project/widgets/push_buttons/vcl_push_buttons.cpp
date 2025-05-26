@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/push_buttons/vcl_push_buttons.cpp $
- * $Revision: #3 $
- * $DateTime: 2021/05/05 18:24:34 $
- * Last checked in by: $Author: starritt $
+/* File: qeVCLApp/src/project/widgets/push_buttons/vcl_push_buttons.cpp
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

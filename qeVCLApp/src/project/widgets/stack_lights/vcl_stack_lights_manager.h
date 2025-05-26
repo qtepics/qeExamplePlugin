@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights_manager.h $
- * $Revision: #2 $
- * $DateTime: 2021/04/14 11:57:06 $
- * Last checked in by: $Author: starritt $
+/* File: qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights_manager.h
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

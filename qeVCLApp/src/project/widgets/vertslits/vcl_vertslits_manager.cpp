@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/vertslits/vcl_vertslits_manager.cpp $
- * $Revision: #1 $
- * $DateTime: 2020/11/27 17:34:56 $
- * Last checked in by: $Author: wangz $
+/* File: qeVCLApp/src/project/widgets/vertslits/vcl_vertslits_manager.cpp
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

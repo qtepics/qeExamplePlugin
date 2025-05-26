@@ -1,7 +1,6 @@
-/* $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/filter_screen/vcl_filter_screen_manager.cpp $
- * $Revision: #2 $
- * $DateTime: 2021/06/30 16:38:48 $
- * Last checked in by: $Author: wangz $
+/* File: qeVCLApp/src/project/widgets/filter_screen/vcl_filter_screen_manager.cpp
+ * DateTime: Mon May 26 17:17:29 2025
+ * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.

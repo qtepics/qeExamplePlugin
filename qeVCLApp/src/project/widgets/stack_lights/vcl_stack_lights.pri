@@ -1,7 +1,6 @@
-# $File: //ASP/tec/gui/qevcl/trunk/qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights.pri $
-# $Revision: #1 $
-# $DateTime: 2021/04/01 21:40:54 $
-# Last checked in by: $Author: starritt $
+# File: qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights.pri
+# DateTime: Mon May 26 17:17:29 2025
+# Last checked in by: starritt
 #
 
 INCLUDEPATH += $$PWD
