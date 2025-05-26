@@ -1,18 +1,50 @@
+# Install directories
+/bin/
+/cfg/
+/db/
+/dbd/
+/html/
+/include/
+/lib/
+/templates/
+# AS specific install directories
+/crapi/
+/user_env/
+/ui/
+/pmc/
+
+# Qt etc
 O.Common/
 O.linux-x86_64/
 O.linux-x86/
 O.windows-x64/
 O.win32-x86/
 O.win32-x86-mingw/
-bin/
-lib/
-include/
-*.o
-*.exe
-*.linux-x86_64
-*.linux-x86
-*.local
-*.creator.user
-*.pro.user
+O.windows-x64-mingw/
+
+# Local configuration files
+/configure/*.local
+
+# iocBoot generated files
+/iocBoot/*ioc*/cdCommands
+/iocBoot/*ioc*/dllPath.bat
+/iocBoot/*ioc*/envPaths
+/iocBoot/*ioc*/relPaths.sh
+
+# Build directories
+O.*/
+
+# Common files created by other tools
+/QtC-*
+/.vscode/
+*.orig
+*.log
+.*.swp
+.DS_Store
+*~
+.iocsh_history
+
+*.qmake.stash
 Makefile.*
-object_script.*
+
+# end
