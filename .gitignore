@@ -42,8 +42,10 @@ O.*/
 .*.swp
 .DS_Store
 *~
+*.kate-swp
 .iocsh_history
 
+*pro.user
 *.qmake.stash
 Makefile.*
 

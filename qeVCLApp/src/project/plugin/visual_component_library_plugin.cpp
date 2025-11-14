@@ -1,5 +1,5 @@
 /* File: qeVCLApp/src/project/plugin/visual_component_library_plugin.cpp
- * DateTime: Mon May 26 17:17:29 2025
+ * DateTime: Fri Nov 14 17:13:22 2025
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
