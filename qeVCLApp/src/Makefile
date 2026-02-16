@@ -1,5 +1,5 @@
 # File: qeVCLApp/src/Makefile
-# DateTime: Mon May 26 17:17:29 2025
+# DateTime: Mon Feb 16 16:01:17 2026
 # Last checked in by: starritt
 #
 # This make file is the bridge beween the EPICS build system and the Qt project qmake/make paradigm.
@@ -32,6 +32,12 @@ else
        :
     endef
 
+endif
+
+# Set default number of cores if not otherwise defined.
+#
+ifndef QE_NUMBER_OF_CORES
+   QE_NUMBER_OF_CORES = 4
 endif
 
 # Directories of interest.
@@ -75,7 +81,7 @@ install: $(TARGET)
 $(TARGET) : $(SOURCE_DIR)/$(MAKEFILE)  $(SOURCE_DIR)/*/*
 	@echo "=== Building $(LIBFILE) plugin"                      && \
 	cd  $(SOURCE_DIR)                                           && \
-	make -f $(MAKEFILE) -j 3 -w                                 && \
+	make -f $(MAKEFILE) -j $(QE_NUMBER_OF_CORES) -w             && \
 	echo "=== $(LIBFILE) library build complete"
 
 
