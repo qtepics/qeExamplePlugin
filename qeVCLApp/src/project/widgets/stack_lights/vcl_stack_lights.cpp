@@ -5,7 +5,7 @@
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2021-2024 Australian Synchrotron
+ * Copyright (c) 2021-2026 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -72,8 +72,8 @@ VCLStackLights::VCLStackLights (QWidget* parent) :
    // The variable name property manager class only delivers an updated
    // variable name after the user has stopped typing.
    //
-   this->connectNewVariableNameProperty
-         (SLOT (useNewPvName (QString, QString, unsigned int)));
+   this->connectPvNameProperties
+         (SLOT (usePvNameProperties (const QEPvNameProperties&)));
 }
 
 //------------------------------------------------------------------------------
@@ -160,32 +160,31 @@ void VCLStackLights::establishConnection (unsigned int variableIndex)
    if (variableIndex != MAIN_PV_INDEX) return;  // sanity check
 
    // Create a connection.
-   // If successfull, the QCaObject object that will supply data update signals will be returned
-   // Note createConnection creates the connection and returns reference to existing QCaObject.
+   // If successfull, the QEChannel object that will supply data update signals will be returned
+   // Note createConnection creates the connection and returns reference to existing QEChannel.
    //
-   qcaobject::QCaObject* qca = this->createConnection (variableIndex);
+   QEChannel* qca = this->createConnection (variableIndex);
 
-   // If a QCaObject object is now available to supply data update signals,
+   // If a QEChannel object is now available to supply data update signals,
    // connect it to the appropriate slots.
    //
    if (qca) {
-      QObject::connect (qca,  SIGNAL (connectionChanged (QCaConnectionInfo&, const unsigned int &)),
-                        this, SLOT   (connectionChanged (QCaConnectionInfo&, const unsigned int &)));
+      QObject::connect (qca,  SIGNAL (connectionUpdated (const QEConnectionUpdate&)),
+                        this, SLOT   (connectionUpdated (const QEConnectionUpdate&)));
 
-      QObject::connect (qca,  SIGNAL (integerChanged (const long&, QCaAlarmInfo&, QCaDateTime&, const unsigned int&)),
-                        this, SLOT   (valueChanged   (const long&, QCaAlarmInfo&, QCaDateTime&, const unsigned int&)));
+      QObject::connect (qca,  SIGNAL (valueUpdated (const QEIntegerValueUpdate&)),
+                        this, SLOT   (valueUpdated (const QEIntegerValueUpdate&)));
    }
 }
 
 //------------------------------------------------------------------------------
 //
-qcaobject::QCaObject* VCLStackLights::createQcaItem (unsigned int variableIndex)
+QEChannel* VCLStackLights::createQcaItem (unsigned int variableIndex)
 {
    if (variableIndex != MAIN_PV_INDEX) return NULL;  // sanity check
 
-   qcaobject::QCaObject* result;
-   result = new QEInteger (this->getSubstitutedVariableName (variableIndex),
-                           this, &this->integerFormatting, variableIndex);
+   const QString pvName = this->getSubstitutedVariableName (variableIndex);
+   QEChannel* result = new QEInteger (pvName, this, &this->integerFormatting, variableIndex);
 
    // Apply currently defined array index/elements request values.
    //
@@ -232,14 +231,15 @@ void VCLStackLights::paste (QVariant s)
 // slots
 //------------------------------------------------------------------------------
 //
-void VCLStackLights::connectionChanged (QCaConnectionInfo& connectionInfo,
-                                        const unsigned int &variableIndex)
+void VCLStackLights::connectionUpdated (const QEConnectionUpdate& update)
 {
-   if (variableIndex != MAIN_PV_INDEX) return;  // sanity check
+   const unsigned int vi = update.variableIndex;
+
+   if (vi != MAIN_PV_INDEX) return;  // sanity check
 
    // Note the connected state
    //
-   this->isConnected = connectionInfo.isChannelConnected();
+   this->isConnected = update.connectionInfo.isChannelConnected();
 
    if (!this->isConnected) {
       this->update ();
@@ -247,42 +247,44 @@ void VCLStackLights::connectionChanged (QCaConnectionInfo& connectionInfo,
 
    // Display the connected state
    //
-   this->updateToolTipConnection (this->isConnected, variableIndex);
+   this->updateToolTipConnection (this->isConnected, vi);
 
-   this->emitDbConnectionChanged (variableIndex);
+   this->emitDbConnectionChanged (vi);
 }
 
 //------------------------------------------------------------------------------
 //
-void VCLStackLights::valueChanged (const long& value, QCaAlarmInfo& alarmInfo,
-                                   QCaDateTime&, const unsigned int& variableIndex)
+void VCLStackLights::valueUpdated (const QEIntegerValueUpdate& update)
 {
-   if (variableIndex != MAIN_PV_INDEX) return;  // sanity check
+   const unsigned int vi = update.variableIndex;
 
-   this->isValid = !alarmInfo.isInvalid();
-   this->currentValue = value;
-   this->alarmColour = QColor (alarmInfo.getColorName());
+   if (vi != MAIN_PV_INDEX) return;  // sanity check
+
+   this->isValid = !update.alarmInfo.isInvalid();
+   this->currentValue = update.value;
+   this->alarmColour = QColor (update.alarmInfo.getColorName());
    this->update ();
 
    // Invoke tool tip handling directly. We don't want to interfere with the style
    // as widget draws it's own stuff with own, possibly clear, colours.
    //
-   this->processAlarmInfo (alarmInfo, variableIndex);
+   this->processAlarmInfo (update.alarmInfo, vi);
 
    // Signal a database value change to any Link (or other) widgets using one
    // of the dbValueChanged (for main variable only).
    //
-   this->emitDbValueChanged (variableIndex);
+   this->emitDbValueChanged (vi);
 }
 
 //------------------------------------------------------------------------------
 //
-void VCLStackLights::useNewPvName (QString variableNameIn,
-                                   QString substitutionsIn,
-                                   unsigned int variableIndex)
+void VCLStackLights::usePvNameProperties (const QEPvNameProperties& pvNameProperties)
 {
-   if (variableIndex != MAIN_PV_INDEX) return;  // sanity check
-   this->setVariableNameAndSubstitutions (variableNameIn, substitutionsIn, variableIndex);
+   if (pvNameProperties.index != MAIN_PV_INDEX) return;  // sanity check
+
+   this->setVariableNameAndSubstitutions (pvNameProperties.pvName,
+                                          pvNameProperties.substitutions,
+                                          pvNameProperties.index);
 }
 
 // end

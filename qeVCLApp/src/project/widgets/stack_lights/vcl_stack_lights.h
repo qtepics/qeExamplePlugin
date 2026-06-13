@@ -5,7 +5,7 @@
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2021-2023 Australian Synchrotron
+ * Copyright (c) 2021-2026 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -31,10 +31,12 @@
 #include <QColor>
 #include <QObject>
 #include <QWidget>
-#include <QCaObject.h>
+#include <QEChannel.h>
 #include <QCaAlarmInfo.h>
 #include <QEAbstractWidget.h>
+#include <QEInteger.h>
 #include <QEIntegerFormatting.h>
+#include <QCaVariableNamePropertyManager.h>
 #include <QESingleVariableMethods.h>
 #include <visual_component_library_global.h>
 
@@ -94,7 +96,7 @@ signals:
 protected:
    void paintEvent (QPaintEvent* event);
    void establishConnection (unsigned int variableIndex);
-   qcaobject::QCaObject* createQcaItem (unsigned int variableIndex);
+   QEChannel* createQcaItem (unsigned int variableIndex);
 
    // Drag and Drop
    void dragEnterEvent (QDragEnterEvent *event) { this->qcaDragEnterEvent (event); }
@@ -126,17 +128,11 @@ private:
    QColor alarmColour;
 
 private slots:
-   void connectionChanged (QCaConnectionInfo& connectionInfo,
-                           const unsigned int &variableIndex);
+   void connectionUpdated (const QEConnectionUpdate&);
 
-   void valueChanged (const long& value,
-                      QCaAlarmInfo& alarmInfo,
-                      QCaDateTime& dateTime,
-                      const unsigned int& variableIndex);
+   void valueUpdated (const QEIntegerValueUpdate&);
 
-   void useNewPvName (QString variableNameIn,
-                      QString variableNameSubstitutionsIn,
-                      unsigned int variableIndex);
+   void usePvNameProperties (const QEPvNameProperties&);
 };
 
 #endif  // VCL_STACK_LIGHTS_H

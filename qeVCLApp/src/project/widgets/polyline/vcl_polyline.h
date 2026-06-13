@@ -35,7 +35,7 @@
 #include <QMouseEvent>
 #include <QPointF>
 #include <QWidget>
-#include <QCaObject.h>
+#include <QEChannel.h>
 #include <QCaAlarmInfo.h>
 #include <visual_component_library_global.h>
 

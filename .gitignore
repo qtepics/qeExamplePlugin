@@ -1,4 +1,7 @@
+# qevcl  .gitignore
+#
 # Install directories
+#
 /bin/
 /cfg/
 /db/
@@ -21,6 +24,8 @@ O.windows-x64/
 O.win32-x86/
 O.win32-x86-mingw/
 O.windows-x64-mingw/
+.qtc_clangd/
+.cache/
 
 # Local configuration files
 /configure/*.local
@@ -37,6 +42,8 @@ O.*/
 # Common files created by other tools
 /QtC-*
 /.vscode/
+/_pro
+
 *.orig
 *.log
 .*.swp
@@ -47,6 +54,7 @@ O.*/
 
 *pro.user
 *.qmake.stash
+*.idx
 Makefile.*
 
 # end
