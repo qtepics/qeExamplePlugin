@@ -38,6 +38,7 @@
 #include <vcl_icons_manager.h>
 #include <vcl_eps_comp_manager.h>
 #include <vcl_heartbeat_manager.h>
+#include <vcl_text_viewer_manager.h>
 
 // ADD NEXT WIDGET MANAGER HEADER FILE HERE...
 // #include <vcl_polyline_manager.h>
@@ -65,6 +66,7 @@ VclWidgets::VclWidgets(QObject *parent) : QObject(parent)
    this->widgets.append (new VCLCameraIconManager (this));
    this->widgets.append (new VCLEpsCompManager (this));
    this->widgets.append (new VCLHeartBeatManager (this));
+   this->widgets.append (new VCLTextViewerManager (this));
 
    // ADD NEXT WIDGET HERE...
    // this->widgets.append (new VCLPolylineManager (this));
