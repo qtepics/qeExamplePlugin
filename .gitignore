@@ -56,5 +56,6 @@ O.*/
 *.qmake.stash
 *.idx
 Makefile.*
+*.tar.gz
 
 # end

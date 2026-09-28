@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/vcl/heartbeat">
+        <file>vcl_heartbeat.png</file>
+    </qresource>
+</RCC>

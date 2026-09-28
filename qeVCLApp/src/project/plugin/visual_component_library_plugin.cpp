@@ -1,11 +1,12 @@
-/* File: qeVCLApp/src/project/plugin/visual_component_library_plugin.cpp
- * DateTime: Fri Nov 14 17:13:22 2025
+/* Repo: tec_gui/qevcl
+ * File: qeVCLApp/src/project/plugin/visual_component_library_plugin.cpp
+ * DateTime: Thu Sep 24 16:01:34 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2019-2023 Australian Synchrotron
+ * Copyright (c) 2019-2026 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -36,6 +37,7 @@
 #include <vcl_push_buttons_manager.h>
 #include <vcl_icons_manager.h>
 #include <vcl_eps_comp_manager.h>
+#include <vcl_heartbeat_manager.h>
 
 // ADD NEXT WIDGET MANAGER HEADER FILE HERE...
 // #include <vcl_polyline_manager.h>
@@ -62,6 +64,7 @@ VclWidgets::VclWidgets(QObject *parent) : QObject(parent)
    this->widgets.append (new VCLIonPumpIconManager (this));
    this->widgets.append (new VCLCameraIconManager (this));
    this->widgets.append (new VCLEpsCompManager (this));
+   this->widgets.append (new VCLHeartBeatManager (this));
 
    // ADD NEXT WIDGET HERE...
    // this->widgets.append (new VCLPolylineManager (this));

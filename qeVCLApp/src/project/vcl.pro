@@ -1,7 +1,9 @@
+# Repo: tec_gui/qevcl
 # File: qeVCLApp/src/project/vcl.pro
-# DateTime: Fri Nov 14 17:13:08 2025
+# DateTime: Thu Sep 24 16:01:34 2026
 # Last checked in by: starritt
 #
+
 #===========================================================
 # Since Qt 4.7.4, enable-auto-import is required to avoid a crash on windows when the qwt dll is loaded
 # Depending on compiler the '-W1' may or may not be required.
@@ -34,6 +36,7 @@ equals( QT_MAJOR_VERSION, 5 ) {
     CONFIG += plugin
     QT += core gui xml network
     QT += uitools designer
+    warning ( "Qt Version 5 is geeting old - time to update to Qt 6")
 }
 
 # Qt 6 configuration
@@ -106,6 +109,7 @@ include (widgets/stack_lights/vcl_stack_lights.pri)
 include (widgets/push_buttons/vcl_push_buttons.pri)
 include (widgets/icons/vcl_icons.pri)
 include (widgets/eps_comp/vcl_eps_comp.pri)
+include (widgets/heartbeat/vcl_heartbeat.pri)
 
 # INCLUDE NEXT WIDGET HERE...
 # include (widgets/polyline/vcl_polyline.pri)
