@@ -27,89 +27,31 @@
  */
 
 #include "vcl_heartbeat.h"
-#include <ui_vcl_heartbeat.h>
 #include <QDebug>
-#include <QECommon.h>
+#include <QSimpleShape.h>
 
 #define DEBUG qDebug () << "vcl_heartbeat" << __LINE__ << __FUNCTION__ << "  "
+
+static const QColor diastolicColour = QColor (0x5A7E90);  // dark blue
+static const QColor systolicColour  = QColor (0x00AAFF);  // bright blue
+
 
 //------------------------------------------------------------------------------
 //
 VCLHeartBeat::VCLHeartBeat (QWidget* parent) : 
-   QEAbstractWidget (parent),
-   ui (new Ui::VCLHeartBeat ())
+   QESimpleShape (parent)
 {
-   this->ui->setupUi (this);
-
-   // No variables managed directly by this widget, PV management is left to
-   // the embedded QE Widgets.
-   //
-   this->setNumVariables (0);
-
    this->setMinimumSize (22, 20);
 
-   this->setVariableAsToolTip (false);
-   this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (QE::Never);
-
-   this->mIocName = "";
-   this->mEdgeWidth = 0;
-   this->mDefaultSubstitutions = "";
-
-   this->ui->heartBeatShape->setEdgeWidth (0);
+   this->setShape (QSimpleShape::Shapes::heart);
+   this->setModulus (2);
+   this->setColour0Property (diastolicColour);
+   this->setColour1Property (systolicColour);
+   this->setDisplayAlarmStateOption (QE::DisplayAlarmStateOptions::WhenInvalid);
 }
 
 //------------------------------------------------------------------------------
 //
-VCLHeartBeat::~VCLHeartBeat ()
-{
-   delete this->ui;
-   this->ui = NULL;
-}
-
-//------------------------------------------------------------------------------
-//
-void VCLHeartBeat::setIocName (const QString& iocName)
-{
-   this->mIocName = iocName;
-   this->ui->heartBeatShape->setVariableNameProperty (iocName + ":IOC_UP_TIME_MONITOR");
-}
-
-//------------------------------------------------------------------------------
-//
-QString VCLHeartBeat::getIocName () const
-{
-   return this->mIocName;
-}
-
-//------------------------------------------------------------------------------
-//
-void VCLHeartBeat::setEdgeWidth (const int edgeWidth)
-{
-   this->ui->heartBeatShape->setEdgeWidth (edgeWidth);
-}
-
-//------------------------------------------------------------------------------
-//
-int VCLHeartBeat::getEdgeWidth () const
-{
-   return this->ui->heartBeatShape->getEdgeWidth ();
-}
-
-//------------------------------------------------------------------------------
-//
-void VCLHeartBeat::setDefaultSubstitutions (const QString& defSubs)
-{
-   this->mDefaultSubstitutions = defSubs;
-
-   this->ui->heartBeatShape->setVariableNameSubstitutionsProperty (defSubs);
-}
-
-//------------------------------------------------------------------------------
-//
-QString VCLHeartBeat::getDefaultSubstitutions () const
-{
-   return this->mDefaultSubstitutions;
-}
+VCLHeartBeat::~VCLHeartBeat () { }
 
 // end

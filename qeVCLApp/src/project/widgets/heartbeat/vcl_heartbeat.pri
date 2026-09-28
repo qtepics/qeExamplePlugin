@@ -8,7 +8,6 @@ INCLUDEPATH += $$PWD
 
 HEADERS += $$PWD/vcl_heartbeat.h
 SOURCES += $$PWD/vcl_heartbeat.cpp
-FORMS   += $$PWD/vcl_heartbeat.ui
 
 HEADERS += $$PWD/vcl_heartbeat_manager.h
 SOURCES += $$PWD/vcl_heartbeat_manager.cpp

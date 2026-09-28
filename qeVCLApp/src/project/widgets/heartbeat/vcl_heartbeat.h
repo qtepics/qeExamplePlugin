@@ -31,58 +31,19 @@
 
 #include <QObject>
 #include <QWidget>
-#include <QEAbstractWidget.h>
-
+#include <QESimpleShape.h>
 #include <visual_component_library_global.h>
 
-namespace Ui {
-    class VCLHeartBeat;  // differed
-}
-
-// VCLHeartBeat and VCLValve are essentially identical, apart from
-// the icons used for each state - keep in sync.
+//
 //
 class VISUAL_COMPONENT_LIBRARY_SHARED VCLHeartBeat :
-   public QEAbstractWidget
+   public QESimpleShape
 {
    Q_OBJECT
-
-   Q_PROPERTY (QString  iocName
-               READ  getIocName
-               WRITE setIocName)
-
-   Q_PROPERTY (int   edgeWidth
-               READ  getEdgeWidth
-               WRITE setEdgeWidth)
-
-   /// Default macro substitutions. The default is no substitutions.
-   /// The format is NAME1=VALUE1[,] NAME2=VALUE2...
-   /// Values may be quoted strings. For example, 'PUMP=PMP3, NAME = "My Pump"'
-   /// These substitutions are applied to variable names for all QE widgets.
-   /// In some widgets are are also used for other purposes.
-   ///
-   Q_PROPERTY (QString  defaultSubstitutions
-               READ  getDefaultSubstitutions
-               WRITE setDefaultSubstitutions)
-
 public:
    explicit VCLHeartBeat (QWidget* parent = 0);
    ~VCLHeartBeat ();
 
-   void setIocName (const QString& iocName);
-   QString getIocName () const;
-
-   void setEdgeWidth (const int edgeWidth);
-   int getEdgeWidth () const;
-
-   void setDefaultSubstitutions (const QString& defSubs);
-   QString getDefaultSubstitutions () const;
-
-private:
-   Ui::VCLHeartBeat* ui;
-   QString mIocName;
-   QString mDefaultSubstitutions;
-   int mEdgeWidth;
 };
 
 #endif  // VCL_HEARTBEAT_H
