@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/vcl/text_viewer">
+        <file>vcl_text_viewer.png</file>
+    </qresource>
+</RCC>
