@@ -1,11 +1,12 @@
-/* File: qeVCLApp/src/project/widgets/text_viewer/vcl_text_viewer_manager.h
- * DateTime: Mon May 26 17:17:29 2025
+/* Repo: tec_gui/qevcl
+ * File: qeVCLApp/src/project/widgets/text_viewer/vcl_text_viewer_manager.h
+ * DateTime: Tue Sep 29 09:41:53 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2023 Australian Synchrotron
+ * Copyright (c) 2026 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by

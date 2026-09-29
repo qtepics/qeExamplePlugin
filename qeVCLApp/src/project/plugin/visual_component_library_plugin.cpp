@@ -1,6 +1,6 @@
 /* Repo: tec_gui/qevcl
  * File: qeVCLApp/src/project/plugin/visual_component_library_plugin.cpp
- * DateTime: Thu Sep 24 16:01:34 2026
+ * DateTime: Tue Sep 29 09:42:57 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
