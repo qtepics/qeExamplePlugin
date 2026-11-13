@@ -1,11 +1,12 @@
-/* File: qeVCLApp/src/project/widgets/dblslits/vcl_dblslits.cpp
- * DateTime: Mon May 26 17:17:29 2025
+/* Repo: tec_gui/qevcl
+ * File: qeVCLApp/src/project/widgets/dblslits/vcl_dblslits.cpp
+ * DateTime: Tue Oct 27 11:58:31 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
  * developed at the Australian Synchrotron.
  *
- * Copyright (c) 2020-2024 Australian Synchrotron
+ * Copyright (c) 2020-2026 Australian Synchrotron
  *
  * The QE VCL is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -128,7 +129,7 @@ VCLDoubleSlits::VCLDoubleSlits (QWidget* parent) :
 
    this->setVariableAsToolTip (false);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (QE::Never);
+   this->setDisplayAlarmStateOption (QE::DisplayAlarmStateOptions::Never);
 }
 
 //------------------------------------------------------------------------------

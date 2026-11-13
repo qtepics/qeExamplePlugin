@@ -1,6 +1,6 @@
 /* Repo: tec_gui/qevcl
  * File: qeVCLApp/src/project/widgets/text_viewer/vcl_text_viewer.cpp
- * DateTime: Tue Sep 29 09:41:53 2026
+ * DateTime: Tue Oct 27 11:58:31 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
@@ -48,7 +48,7 @@ VCLTextViewer::VCLTextViewer (QWidget* parent) :
    this->setNumVariables (1);
    this->setVariableAsToolTip (true);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (QE::WhenInvalid);
+   this->setDisplayAlarmStateOption (QE::DisplayAlarmStateOptions::WhenInvalid);
 
    // Use default context menu.
    //

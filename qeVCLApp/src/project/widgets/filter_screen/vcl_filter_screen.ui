@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>VCLFilterScreen</class>
  <widget class="QWidget" name="VCLFilterScreen">
@@ -35,10 +35,10 @@
    <item>
     <widget class="QFrame" name="mainFrame">
      <property name="frameShape">
-      <enum>QFrame::Box</enum>
+      <enum>QFrame::Shape::Box</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
+      <enum>QFrame::Shadow::Sunken</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <property name="leftMargin">
@@ -71,7 +71,7 @@
          </size>
         </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignmentFlag::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -95,7 +95,7 @@
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::FocusPolicy::NoFocus</enum>
         </property>
         <property name="text">
          <string>Insert</string>
@@ -106,11 +106,11 @@
         <property name="defaultStyle" stdset="0">
          <string>QEPushButton{ background-color: #a0ffa0; color: #000000; }</string>
         </property>
-        <property name="displayAlarmStateOption" stdset="0">
-         <enum>QE::Never</enum>
+        <property name="displayAlarmStateOption">
+         <enum>QE::DisplayAlarmStateOptions::Never</enum>
         </property>
         <property name="format" stdset="0">
-         <enum>QE::Integer</enum>
+         <enum>QE::Formats::Integer</enum>
         </property>
        </widget>
       </item>
@@ -134,7 +134,7 @@
          </font>
         </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::FocusPolicy::NoFocus</enum>
         </property>
         <property name="text">
          <string>Withdraw</string>
@@ -145,11 +145,11 @@
         <property name="defaultStyle" stdset="0">
          <string>QEPushButton{ background-color: #ffa0a0; color: #000000; }</string>
         </property>
-        <property name="displayAlarmStateOption" stdset="0">
-         <enum>QE::Never</enum>
+        <property name="displayAlarmStateOption">
+         <enum>QE::DisplayAlarmStateOptions::Never</enum>
         </property>
         <property name="format" stdset="0">
-         <enum>QE::Integer</enum>
+         <enum>QE::Formats::Integer</enum>
         </property>
        </widget>
       </item>
@@ -168,23 +168,23 @@
          </size>
         </property>
         <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <set>Qt::AlignmentFlag::AlignCenter</set>
         </property>
        </widget>
       </item>
       <item row="3" column="0" colspan="2">
        <widget class="QEPvFrame" name="statusImage">
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::Shape::NoFrame</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
+         <enum>QFrame::Shadow::Plain</enum>
         </property>
         <property name="variableAsToolTip">
          <bool>true</bool>
         </property>
-        <property name="displayAlarmStateOption" stdset="0">
-         <enum>QE::Never</enum>
+        <property name="displayAlarmStateOption">
+         <enum>QE::DisplayAlarmStateOptions::Never</enum>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -226,7 +226,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="vcl_filter_screen.qrc"></include>
+  <include location="vcl_filter_screen.qrc"/>
  </resources>
- <connections></connections>
+ <connections/>
 </ui>

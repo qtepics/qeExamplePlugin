@@ -1,5 +1,6 @@
-/* File: qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights.cpp
- * DateTime: Mon May 26 17:17:29 2025
+/* Repo: tec_gui/qevcl
+ * File: qeVCLApp/src/project/widgets/stack_lights/vcl_stack_lights.cpp
+ * DateTime: Tue Oct 27 11:58:31 2026
  * Last checked in by: starritt
  *
  * This file is part of the EPICS Qt (QE) Visual Component Libaray (VCL)
@@ -62,7 +63,7 @@ VCLStackLights::VCLStackLights (QWidget* parent) :
    this->setNumVariables (1);
    this->setVariableAsToolTip (true);
    this->setAllowDrop (false);
-   this->setDisplayAlarmStateOption (QE::WhenInvalid);
+   this->setDisplayAlarmStateOption (QE::DisplayAlarmStateOptions::WhenInvalid);
 
    // Use default context menu.
    //
